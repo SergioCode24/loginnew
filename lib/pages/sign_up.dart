@@ -33,7 +33,7 @@ class _SignUpState extends State<SignUp> {
         child: Column(
           children: [
             Expanded(
-              flex: 2,
+              flex: 5,
               child: Container(
                 alignment: Alignment.center,
                 child: const Text(
@@ -45,29 +45,12 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             Expanded(
-              flex: 3,
+              flex: 6,
               child: Container(
                 child: ListView.builder(
                   itemCount: arrayTextSignUp.length,
                   itemBuilder: (BuildContext context, int index) {
                     return TextFormFieldSample(txt: arrayTextSignUp[index]);
-                  },
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                alignment: Alignment.topLeft,
-                child: ToggleSwitch(
-                  minWidth: 90.0,
-                  minHeight: 45.0,
-                  initialLabelIndex: 0,
-                  totalSwitches: 2,
-                  labels: ['Мужчина',
-                    'Женщина'],
-                  onToggle: (index) {
-                    print('switched to: $index');
                   },
                 ),
               ),
@@ -90,7 +73,24 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
             Expanded(
-              flex: 1,
+              flex: 3,
+              child: Container(
+                alignment: Alignment.topLeft,
+                child: ToggleSwitch(
+                  minWidth: 90.0,
+                  minHeight: 45.0,
+                  initialLabelIndex: 0,
+                  totalSwitches: 2,
+                  labels: ['Мужчина',
+                    'Женщина'],
+                  onToggle: (index) {
+                    print('switched to: $index');
+                  },
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 3,
               child: Container(
                 alignment: Alignment.center,
                 child: ElevatedButton(
